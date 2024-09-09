@@ -1,27 +1,28 @@
 #include <stdio.h>
 #include "cipher.h"
+#include "caesar.h"
 
 void menu() {
     char choice;
     int shiftvalue;
-    char text[100];
+    char text[255];
 
-    // printf("Vælg (e)ncrypt or (d)ecrypt: ");
-    printf("Vælg kryptering(e) eller dekryptering(d): ");
+    printf("Choose (e)ncrypt or (d)ecrypt: ");
     scanf(" %c", &choice);
-    printf("Vælg forskydningsværdi: ");
+    printf("Enter shift value: ");
     scanf("%d", &shiftvalue);
-    printf("Indtast tekst: ");
-    scanf(" %[^\n]", text);
+    getchar(); // Consume newline character left by scanf
+    printf("Enter text: ");
+    fgets(text, 255, stdin);
 
     if (choice == 'e') {
         encrypt(text, shiftvalue);
-        printf("Krypteret tekst: %s\n", text);
+        printf("Encrypted text: %s\n", text);
     } else if (choice == 'd') {
         decrypt(text, shiftvalue);
-        printf("Dekrypteret tekst: %s\n", text);
+        printf("Decrypted text: %s\n", text);
     } else {
-        printf("Ugyldigt valg\n");
+        printf("Invalid choice.\n");
     }
 }
 

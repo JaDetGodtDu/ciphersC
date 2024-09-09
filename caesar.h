@@ -1,6 +1,6 @@
 #ifndef CAESAR_H
 #define CAESAR_H
 
-int main();
+void menu();
 
 #endif
