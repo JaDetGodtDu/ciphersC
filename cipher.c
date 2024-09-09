@@ -8,6 +8,7 @@ int alphabet_length;
 void init(){
     printf("Initializing cipher\n");
     alphabet_length = sizeof(alphabet) / sizeof(alphabet[0]);
+    // alphabet_length = 29;
 }
 
 int letterToNumber(char letter){

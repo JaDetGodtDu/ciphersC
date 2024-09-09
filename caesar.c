@@ -11,6 +11,10 @@ void menu() {
     scanf(" %c", &choice);
     getchar(); // Consume newline character
 
+    printf("Enter shift value: ");
+    scanf("%d", &shiftvalue);
+    getchar(); // Consume newline character
+    
     printf("Enter text: ");
     fgets(text, 255, stdin);
     // Remove newline character manually
@@ -20,9 +24,6 @@ void menu() {
             break;
         }
     }
-
-    printf("Enter shift value: ");
-    scanf("%d", &shiftvalue);
 
     init();
 
