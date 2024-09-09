@@ -1,12 +1,15 @@
 #include "cipher.h"
 #include <ctype.h>
 #include <stdio.h>
+#include <locale.h>
 
 char alphabet[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZÆØÅ";
 int alphabet_length;
 
 void init(){
+    setlocale(LC_ALL, "da_DK.UTF-8");
     printf("Initializing cipher\n");
+    printf("Alphabet: %s\n", alphabet);
     alphabet_length = sizeof(alphabet) / sizeof(alphabet[0]);
     // alphabet_length = 29;
 }
