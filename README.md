@@ -7,7 +7,7 @@ This program implements a simple Caesar cipher for encrypting and decrypting tex
 For compiling and running the program, use the following commands
 
 ```
-gcc -o caesar caesar.c cipher.c
+gcc cipher.c caesar.c -o caesar
 ```
 
 Followed by:
